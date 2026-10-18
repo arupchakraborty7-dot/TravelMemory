@@ -68,7 +68,7 @@ Each step below links to the screenshot that proves it. All images are in the [`
 
 ### Step 1: EC2 servers
 
-Four Ubuntu 22.04 instances, two per tier, spread over two Availability Zones. All are `Running` with their status checks passed. The frontend servers are `t3.small` because the React build needs more memory than a `t2.micro` offers.
+Four Ubuntu 26.04 instances, two per tier, spread over two Availability Zones. All are `Running` with their status checks passed. The frontend servers are `t3.small` because the React build needs more memory than a `t2.micro` offers.
 
 | Instance | Type | AZ | Security group |
 |---|---|---|---|
@@ -278,12 +278,11 @@ This change is made on **both** frontend servers after the Backend ALB exists, f
 
 ## 8. How to reproduce
 
-Condensed command reference (Ubuntu 22.04, Node.js 18):
+Condensed command reference (Ubuntu 26.04, Node.js 22.22.1):
 
 ```bash
 # --- Backend server ---
 sudo apt update
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt install -y nodejs git nginx
 git clone https://github.com/UnpredictablePrashant/TravelMemory.git
 cd TravelMemory/backend && npm install
@@ -358,5 +357,3 @@ AWS order of operations: Atlas cluster → master EC2 instances → verify → A
 ├── backend/
 └── frontend/
 ```
-
-> GitHub file names are **case-sensitive**. Keep the screenshot names exactly as listed (for example `backend-nginx-config.png` is lowercase and `Frontend-nginx-config.png` is not), or the images will not display.
