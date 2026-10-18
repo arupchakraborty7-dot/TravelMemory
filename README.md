@@ -185,7 +185,7 @@ The application loads at the custom domain and displays trip records stored in M
 The real connection string is **never committed** to this repository.
 
 ```env
-MONGO_URI=mongodb+srv://arupchakraborty7-db-user:AishaniC%402013@arupcluster.y3kqmyo.mongodb.net/travelmemory
+MONGO_URI=mongodb+srv://arupchakraborty7-db-user:**************@arupcluster.y3kqmyo.mongodb.net/travelmemory
 PORT=3000
 ```
 
