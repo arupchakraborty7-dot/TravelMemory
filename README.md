@@ -185,7 +185,7 @@ The application loads at the custom domain and displays trip records stored in M
 The real connection string is **never committed** to this repository.
 
 ```env
-MONGO_URI=mongodb+srv://<user>:<password>@<cluster>.mongodb.net/travelmemory?retryWrites=true&w=majority
+MONGO_URI=mongodb+srv://arupchakraborty7-db-user:AishaniC%402013@arupcluster.y3kqmyo.mongodb.net/travelmemory
 PORT=3000
 ```
 
@@ -236,7 +236,7 @@ location / {
 ### Frontend to backend connection (`frontend/src/url.js`)
 
 ```js
-export const baseUrl = "http://<backend-alb-dns-name>";
+export const baseUrl = "http://travelmemory-backend-alb-2063493088.us-east-1.elb.amazonaws.com";
 ```
 
 This change is made on **both** frontend servers after the Backend ALB exists, followed by `npm run build` and copying the build to `/var/www/html`.
